@@ -1,0 +1,44 @@
+@import "/home/ollie/.cache/wal/colors.scss";
+
+* { all: unset; }
+
+.parent {
+    background-color: rgba($color: $background, $alpha: 0.9);
+    border-radius: 16px;
+    border: 4px solid $color3;
+    padding: 16px;
+    color: $foreground;
+}
+
+.header {
+    font-weight: bold;
+    font-size: large;
+}
+
+.title {
+    margin-right: 268px;
+    margin-left: 1px;
+}
+
+.button {
+    margin-top: 8px;
+    background-color: $color3;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.button:hover {
+    background-color: $color6;
+}
+
+.button:active {
+    background-color: $color9;
+}
+
+.exit:hover {
+    color: $color3;
+}
+
+.exit, .button {
+    transition: all 0.2s ease;
+}

@@ -1,0 +1,60 @@
+(
+    defwindow audio_menu
+    :monitor 0
+    :exclusive "false"
+    :stacking "overlay"
+    :geometry
+    (geometry :anchor "top right"
+              :width "512px"
+              :x "16px"
+              :y "16px")
+    (audio_menu)
+)
+
+(
+    defwidget audio_menu []
+    (
+        box :class "parent" :space-evenly "false" :orientation "v"
+        (
+            box :class "header" :space-evenly "false"
+            (label :text "    Switch Audio Devices" :class "title")
+            (
+                button 
+                :class "exit" 
+                :onclick "eww open audio_menu --toggle"
+                (label :text " ")
+            )
+        )
+        (
+            box :class "body" :space-evenly "false" :orientation "v"
+            (
+                button 
+                :class "button"
+                :vexpand "false"
+                :onclick "scripts/set_audio_device.sh alsa_output.usb-Generic_USB2.0_Device_20170726905969-01.analog-stereo"
+                (label :text "󰓃   Speakers")
+            )
+            (
+                button 
+                :class "button"
+                :hexpand "false"
+                :onclick "scripts/set_audio_device.sh alsa_output.usb-Razer_Razer_Kraken_7.1_V2_00000000-00.analog-stereo"
+                (label :text "󰋋   Razer Headphones")
+            )
+            (
+                button 
+                :class "button" 
+                :hexpand "false"
+                :onclick "scripts/set_audio_device.sh bluez_output.19_37_58_13_64_75.1"
+                (label :text "󰂯   Bluetooth Headphones")
+            )
+            (
+                button
+                :class "button"
+                :hexpand "false"
+                :onclick "scripts/set_audio_device.sh bluez_output.F4_AF_E7_13_B2_62.1"
+                (label :text "    Airpods")
+            )
+        )
+    )
+)

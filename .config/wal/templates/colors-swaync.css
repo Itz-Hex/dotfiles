@@ -1,0 +1,7 @@
+@define-color foreground #{foreground.strip};
+@define-color background #{background.strip};
+@define-color background-alpha #{background.strip}ee;
+@define-color accent #{color3.strip};
+@define-color current-line #{color0.strip};
+@define-color comment #{color6.strip};
+
